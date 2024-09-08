@@ -51,6 +51,7 @@ class Dev(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'movies',
+        'django_celery_results',
         'gh'
     ]
 
@@ -160,4 +161,6 @@ class Dev(Configuration):
             "level": "DEBUG",
         },
     }
-    OMDB_KEY = '312a8b4e'
+    OMDB_KEY = '96253fcc'
+    CELERY_RESULT_BACKEND = "django-db"
+    CELERY_BROKER_URL = "redis://localhost:6379/0"
