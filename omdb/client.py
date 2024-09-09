@@ -90,7 +90,7 @@ class OmdbClient:
         while True:
             logger.info("Fetching page %d", page)
             resp = self.make_request({"s": search, "type": "movie", "page": str(page)})
-            resp_body = resp.json()
+            resp_body = resp.json() 
             if total_results is None:
                 total_results = int(resp_body["totalResults"])
 
